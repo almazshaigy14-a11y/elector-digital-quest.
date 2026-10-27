@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173f35">
+<title>ЭЛЕКТОР — маршрут осознанного выбора</title>
+<style>
+:root{--forest:#173f35;--forest2:#245a4b;--mint:#e8f0ea;--cream:#f7f7f1;--gold:#f1c66d;--ink:#1b2924;--muted:#65746d;--line:#dce5de;--white:#fff;--red:#a44838;--shadow:0 14px 40px rgba(23,63,53,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,a{font:inherit}button{cursor:pointer}a{color:var(--forest2)}.wrap{max-width:1120px;margin:auto;padding:0 24px}.topbar{position:sticky;top:0;z-index:10;background:rgba(247,247,241,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;color:var(--forest);font-weight:850;letter-spacing:.08em}.logo{width:38px;height:38px;background:var(--forest);color:white;border-radius:13px;display:grid;place-items:center;font-size:20px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks button{border:0;background:transparent;color:var(--muted);padding:10px 12px;border-radius:12px}.navlinks button:hover,.navlinks button.active{background:var(--mint);color:var(--forest)}.hero{padding:66px 0 38px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:var(--forest2)}h1{font-size:clamp(42px,6vw,72px);line-height:.99;letter-spacing:-.055em;margin:15px 0 22px;color:var(--forest)}h2{font-size:clamp(27px,3vw,38px);letter-spacing:-.035em;line-height:1.1;margin:0 0 14px;color:var(--forest)}h3{margin:0 0 8px;font-size:20px;line-height:1.25}p{margin:0 0 14px}.lead{font-size:19px;color:#4c5f56;max-width:660px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{border:1px solid transparent;border-radius:14px;padding:13px 18px;font-weight:750;transition:.15s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}.btn.primary{background:var(--forest);color:white}.btn.primary:hover{background:var(--forest2);transform:translateY(-1px)}.btn.secondary{border-color:#c9d7ce;background:white;color:var(--forest)}.btn.secondary:hover{background:var(--mint)}.hero-art{min-height:330px;background:var(--mint);border-radius:30px;padding:28px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.orbit{width:245px;height:245px;border:1px solid #a9c2b2;border-radius:50%;display:grid;place-items:center;position:relative}.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed #a9c2b2;border-radius:50%}.orbit:before{inset:24px}.orbit:after{inset:53px}.compass{width:118px;height:118px;border-radius:34px;background:var(--forest);color:white;display:grid;place-items:center;font-size:50px;box-shadow:0 20px 45px #173f3533;z-index:1}.orbit-label{position:absolute;background:white;border:1px solid var(--line);padding:8px 12px;border-radius:12px;font-size:12px;font-weight:750;box-shadow:var(--shadow)}.lab1{top:20px;left:0}.lab2{right:-12px;top:100px}.lab3{bottom:20px;left:18px}.section{padding:42px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:22px;padding:23px;box-shadow:0 6px 22px rgba(23,63,53,.035)}.route-card{display:flex;flex-direction:column;min-height:260px}.route-icon{width:48px;height:48px;border-radius:15px;background:var(--mint);display:grid;place-items:center;font-size:24px;margin-bottom:20px}.route-card p{color:var(--muted);font-size:14px;flex:1}.tag{display:inline-flex;align-items:center;border-radius:999px;background:#f5e7c8;color:#614a19;font-size:11px;font-weight:800;letter-spacing:.04em;padding:5px 9px;margin-bottom:12px}.smallbtn{border:0;background:var(--mint);color:var(--forest);padding:11px 13px;border-radius:12px;font-weight:800;text-align:left}.smallbtn:hover{background:#dbe8de}.featureband{background:var(--forest);color:white;border-radius:26px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.featureband h2{color:white}.featureband p{color:#d6e4dc}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.step{border:1px solid #ffffff35;border-radius:16px;padding:15px}.step b{display:block;color:var(--gold);margin-bottom:4px}.panel{background:white;border:1px solid var(--line);border-radius:24px;padding:clamp(20px,4vw,36px);box-shadow:var(--shadow)}.hidden{display:none!important}.quiz-top{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:22px}.progress{height:8px;background:#e8eee9;border-radius:20px;overflow:hidden;margin:12px 0 26px}.progress span{display:block;height:100%;width:0;background:var(--forest2);transition:width .25s}.question{font-size:24px;line-height:1.25;letter-spacing:-.02em;margin:8px 0 20px}.options{display:grid;gap:10px}.option{display:flex;align-items:flex-start;gap:12px;padding:15px;border:1px solid var(--line);background:white;border-radius:15px;text-align:left;color:var(--ink);width:100%}.option:hover{border-color:#93b5a1;background:#fbfdfb}.option.selected{border-color:var(--forest2);background:var(--mint)}.option:disabled{cursor:default}.letter{flex:0 0 28px;height:28px;border-radius:9px;background:#edf2ee;display:grid;place-items:center;font-weight:800;color:var(--forest2);font-size:13px}.feedback{padding:16px;border-radius:15px;margin-top:16px;background:var(--mint);border:1px solid #cbded0}.feedback.bad{background:#fff3ee;border-color:#f0d2c7}.feedback strong{display:block;margin-bottom:5px}.quiz-controls{display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap}.pill{display:inline-flex;background:#f0f3ef;border-radius:999px;padding:6px 10px;font-size:12px;color:var(--muted);font-weight:750}.result-number{font-size:52px;font-weight:900;color:var(--forest);letter-spacing:-.05em}.source-list{display:grid;gap:12px}.source{padding:17px;border:1px solid var(--line);border-radius:15px;background:#fff}.source a{font-weight:800;text-decoration:none}.source a:hover{text-decoration:underline}.source small{display:block;color:var(--muted);margin-top:5px}.notice{border-left:4px solid var(--gold);padding:14px 16px;background:#fff9e9;border-radius:0 12px 12px 0;color:#5d4b24;font-size:14px}.footer{border-top:1px solid var(--line);margin-top:45px;padding:26px 0 40px;color:var(--muted);font-size:13px}.footerinner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.section-anchor{scroll-margin-top:90px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:42px;gap:24px}.hero-art{min-height:280px}.grid{grid-template-columns:1fr}.featureband{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.nav{height:auto;min-height:68px;align-items:flex-start;padding-top:12px;padding-bottom:12px;flex-direction:column;gap:8px}.navlinks{width:100%;overflow:auto;flex-wrap:nowrap}.navlinks button{white-space:nowrap}.question{font-size:21px}.wrap{padding:0 16px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <div class="brand"><div class="logo">Э</div><span>ЭЛЕКТОР</span></div>
+    <nav class="navlinks" aria-label="Главная навигация">
+      <button class="active" data-page="home">Главная</button>
+      <button data-page="routes">Маршруты</button>
+      <button data-page="sources">Правовой навигатор</button>
+      <button data-page="about">О проекте</button>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section id="homePage">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Интерактивный тренажёр · версия 0.1</div>
+        <h1>Понимай.<br>Проверяй.<br><span style="color:#b1842d">Действуй.</span></h1>
+        <p class="lead">ЭЛЕКТОР — цифровой маршрут по избирательному праву. Разбирай учебные ситуации, проверяй свои решения и учись находить официальные источники.</p>
+        <div class="actions">
+          <button class="btn primary" onclick="showPage('routes')">Выбрать маршрут <span aria-hidden="true">↗</span></button>
+          <button class="btn secondary" onclick="showPage('about')">Как это работает</button>
+        </div>
+        <p class="muted" style="font-size:13px;margin-top:18px">Нейтральный образовательный проект. Не связан с продвижением кандидатов или партий.</p>
+      </div>
+      <div class="hero-art" aria-label="Иллюстрация маршрута обучения">
+        <div class="orbit"><div class="compass">⌖</div><span class="orbit-label lab1">Проверь источник</span><span class="orbit-label lab2">Разбери кейс</span><span class="orbit-label lab3">Обоснуй решение</span></div>
+      </div>
+    </div>
+    <section class="section">
+      <div class="section-head"><div><div class="eyebrow">Твой путь</div><h2>Выбери свою роль</h2></div><p class="muted" style="max-width:380px">Каждый маршрут помогает разобраться в разных задачах избирательного процесса.</p></div>
+      <div class="grid">
+        <article class="card route-card"><div class="route-icon">🧭</div><span class="tag">БАЗОВЫЙ УРОВЕНЬ</span><h3>Я — избиратель</h3><p>Права, официальная информация и проверка сообщений о порядке голосования.</p><button class="smallbtn" onclick="startRoute('voter')">Начать маршрут →</button></article>
+        <article class="card route-card"><div class="route-icon">🗂️</div><span class="tag">УЧЕБНЫЕ СИТУАЦИИ</span><h3>Я — организатор</h3><p>Решения в типовых учебных ситуациях с учётом полномочий и установленных процедур.</p><button class="smallbtn" onclick="startRoute('organizer')">Начать маршрут →</button></article>
+        <article class="card route-card"><div class="route-icon">🔎</div><span class="tag">ПРАВОВАЯ ГРАМОТНОСТЬ</span><h3>Я — наблюдатель</h3><p>Как проверять информацию, фиксировать вопросы и обращаться к применимым правилам.</p><button class="smallbtn" onclick="startRoute('observer')">Начать маршрут →</button></article>
+      </div>
+    </section>
+    <section class="section">
+      <div class="featureband">
+        <div><div class="eyebrow" style="color:#f1c66d">Авторская механика</div><h2>Три шага к обоснованному решению</h2><p>Здесь недостаточно угадать ответ. Важно понять, почему он подходит и где проверить правовое основание.</p></div>
+        <div class="steps"><div class="step"><b>01 · РЕШИ</b><span>Выбери действие в кейсе</span></div><div class="step"><b>02 · ПРОВЕРЬ</b><span>Прочитай объяснение и источник</span></div><div class="step"><b>03 · ПРИМЕНИ</b><span>Закрепи навык в следующей ситуации</span></div></div>
+      </div>
+    </section>
+  </section>
+
+  <section id="routesPage" class="hidden section section-anchor">
+    <div class="eyebrow">Интерактивное обучение</div><h2>Карта маршрутов</h2><p class="muted" style="max-width:700px;margin-bottom:24px">Выбери роль. В каждом маршруте — четыре учебных кейса. После ответа появится объяснение, а в конце — твой результат.</p>
+    <div class="grid">
+      <article class="card route-card"><div class="route-icon">🧭</div><h3>Я — избиратель</h3><p>Официальные источники, сведения о процедуре, проверка сообщений.</p><button class="btn primary" onclick="startRoute('voter')">Открыть маршрут</button></article>
+      <article class="card route-card"><div class="route-icon">🗂️</div><h3>Я — организатор</h3><p>Учебные решения в пределах установленного порядка и полномочий.</p><button class="btn primary" onclick="startRoute('organizer')">Открыть маршрут</button></article>
+      <article class="card route-card"><div class="route-icon">🔎</div><h3>Я — наблюдатель</h3><p>Проверка правовых оснований и корректное действие при возникновении вопроса.</p><button class="btn primary" onclick="startRoute('observer')">Открыть маршрут</button></article>
+    </div>
+    <div class="notice" style="margin-top:20px">Кейсы в прототипе предназначены для обучения и обсуждения. В реальной ситуации необходимо учитывать вид выборов, действующую редакцию закона, региональные нормы и конкретные обстоятельства.</div>
+  </section>
+
+  <section id="quizPage" class="hidden section section-anchor">
+    <button class="btn secondary" onclick="showPage('routes')" style="margin-bottom:18px">← Все маршруты</button>
+    <div class="panel">
+      <div class="quiz-top"><div><div class="eyebrow" id="routeEyebrow">Маршрут</div><h2 id="routeTitle">Я — избиратель</h2></div><span class="pill" id="caseCounter">Кейс 1 из 4</span></div>
+      <div class="progress"><span id="progressBar"></span></div>
+      <div class="pill" id="topicPill">Проверка источника</div>
+      <div class="question" id="questionText"></div>
+      <p class="muted" id="contextText"></p>
+      <div class="options" id="optionsBox"></div>
+      <div id="feedbackBox" class="hidden" aria-live="polite"></div>
+      <div class="quiz-controls"><button class="btn secondary" onclick="showPage('routes')">Выйти из маршрута</button><button class="btn primary" id="nextBtn" onclick="nextCase()" disabled>Проверить ответ</button></div>
+    </div>
+  </section>
+
+  <section id="resultPage" class="hidden section section-anchor">
+    <div class="panel">
+      <div class="eyebrow">Маршрут завершён</div><h2 id="resultTitle">Твой результат</h2>
+      <div class="result-number" id="resultScore">0 / 4</div>
+      <p id="resultSummary" class="muted"></p>
+      <div id="resultDetails" class="card" style="margin:20px 0"></div>
+      <div class="actions"><button class="btn primary" id="retryBtn" onclick="retryRoute()">Пройти ещё раз</button><button class="btn secondary" onclick="showPage('routes')">Выбрать другой маршрут</button><button class="btn secondary" onclick="showPage('sources')">Открыть источники</button></div>
+    </div>
+  </section>
+
+  <section id="sourcesPage" class="hidden section section-anchor">
+    <div class="eyebrow">Правовой навигатор</div><h2>Проверяй по первоисточникам</h2>
+    <p class="muted" style="max-width:760px;margin-bottom:24px">Ссылки ниже ведут к официальным ресурсам. Перед использованием конкретной нормы проверь её действующую редакцию, применимость к ситуации и дату обновления.</p>
+    <div class="source-list">
+      <div class="source"><a href="https://www.cikrf.ru/" target="_blank" rel="noopener noreferrer">Центральная избирательная комиссия Российской Федерации ↗</a><small>Официальные сведения, решения, материалы об избирательном процессе и выборах.</small></div>
+      <div class="source"><a href="https://www.rcoit.ru/" target="_blank" rel="noopener noreferrer">РЦОИТ при ЦИК России ↗</a><small>Информационные и образовательные материалы по вопросам избирательного процесса. Если адрес не открывается, воспользуйся страницей конкурса ниже.</small></div>
+      <div class="source"><a href="https://www.rcoit.ru/competitions/atmosphere2027/" target="_blank" rel="noopener noreferrer">Конкурс «Атмосфера» 2026–2027 ↗</a><small>Положение конкурса и приложения. Требования необходимо сверить с актуальными документами организатора.</small></div>
+      <div class="source"><a href="https://pravo.gov.ru/" target="_blank" rel="noopener noreferrer">Официальный интернет-портал правовой информации ↗</a><small>Официальное опубликование правовых актов и поиск действующих редакций.</small></div>
+      <div class="source"><a href="https://www.consultant.ru/document/cons_doc_LAW_37119/" target="_blank" rel="noopener noreferrer">Федеральный закон № 67-ФЗ ↗</a><small>«Об основных гарантиях избирательных прав и права на участие в референдуме граждан Российской Федерации». Сверяй действующую редакцию с официальным опубликованием.</small></div>
+    </div>
+    <div class="notice" style="margin-top:18px">Прототип не заменяет правовую консультацию и не подтверждает автоматически актуальность каждой нормы. Перед конкурсной подачей необходимо вручную проверить адреса, редакции актов и привязку источников к каждому кейсу.</div>
+  </section>
+
+  <section id="aboutPage" class="hidden section section-anchor">
+    <div class="eyebrow">О проекте</div><h2>Обучение через действие</h2>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:22px 0">
+      <article class="card"><div class="route-icon">🎯</div><h3>Цель</h3><p class="muted">Повысить доступность изучения избирательного права и процесса с помощью практических интерактивных заданий.</p></article>
+      <article class="card"><div class="route-icon">🧩</div><h3>Механика</h3><p class="muted">Пользователь принимает решение, получает объяснение, обращается к источнику и применяет знание в новом кейсе.</p></article>
+      <article class="card"><div class="route-icon">⚖️</div><h3>Нейтральность</h3><p class="muted">Материалы посвящены процедурам и правовой грамотности, без поддержки партий, кандидатов и политических взглядов.</p></article>
+    </div>
+    <h3>Что важно до конкурсной подачи</h3>
+    <ul>
+      <li>Проверить каждое правовое объяснение по действующим официальным источникам.</li>
+      <li>Указать автора, версию продукта и фактически использованные инструменты.</li>
+      <li>Протестировать сайт на телефоне и компьютере, проверить все переходы и ссылки.</li>
+      <li>Провести апробацию и описать реальные результаты, не придумывая статистику.</li>
+      <li>Сверить комплект материалов с положением и приложениями конкурса.</li>
+    </ul>
+    <div class="notice">Это первая демонстрационная версия (v0.1). Кейсы учебные, правовая проверка и редактура перед официальным использованием обязательны.</div>
+  </section>
+</main>
+<footer class="footer"><div class="wrap footerinner"><span><b>ЭЛЕКТОР</b> · Маршрут осознанного выбора</span><span>Учебный прототип v0.1 · Не является официальным ресурсом избирательных органов</span></div></footer>
+<script>
+const routes = {
+ voter:{title:"Я — избиратель",eyebrow:"Маршрут избирателя",cases:[
+  {topic:"Проверка источника",q:"Ты получил сообщение, что порядок голосования изменился. Автор неизвестен, ссылка ведёт на незнакомый сайт. Что лучше сделать сначала?",ctx:"Цель — проверить достоверность сведений, прежде чем передавать их другим.",opts:["Сразу переслать сообщение знакомым","Найти разъяснение на официальном ресурсе избирательной комиссии","Считать сообщение ложным только потому, что автор неизвестен"],correct:1,why:"Лучше проверить утверждение по официальному первоисточнику и обратить внимание на дату публикации. Неизвестный источник сам по себе не доказывает ложность, но требует проверки.",source:"ЦИК России: https://www.cikrf.ru/"},
+  {topic:"Права и процедура",q:"Ты хочешь узнать, какие документы и действия необходимы для участия в конкретных выборах. Где искать точный ответ?",ctx:"Процедура может зависеть от вида выборов и действующих правил.",opts:["В старом сообщении в социальной сети","В комментариях под новостью","В официальных материалах избирательной комиссии и действующих правовых актах"],correct:2,why:"Для ответа следует обращаться к официальным материалам и действующей редакции применимых норм. Если информация неясна, уточни её у соответствующей избирательной комиссии.",source:"ЦИК России: https://www.cikrf.ru/"},
+  {topic:"Уточнение информации",q:"В разных публикациях указаны разные сведения о месте голосования. Какой следующий шаг наиболее обоснован?",ctx:"Не делай вывод только на основании популярности или количества репостов.",opts:["Проверить сведения через официальный сервис или избирательную комиссию","Выбрать публикацию с большим числом лайков","Попросить знакомого угадать, какая информация верная"],correct:0,why:"Сведения о конкретной процедуре нужно проверять через официальный ресурс или соответствующую комиссию. Сохрани дату и источник найденной информации.",source:"ЦИК России: https://www.cikrf.ru/"},
+  {topic:"Правовая грамотность",q:"Ты не уверен, распространяется ли определённое правило на твой случай. Что поможет избежать ошибочного вывода?",ctx:"В праве важны обстоятельства ситуации и применимость конкретной нормы.",opts:["Применить правило по аналогии без проверки","Проверить действующую норму и уточнить обстоятельства в официальном источнике","Ориентироваться только на чужой личный опыт"],correct:1,why:"Проверь актуальную редакцию нормы, её сферу применения и обстоятельства. Если вопрос остаётся неясным, обратись за официальным разъяснением.",source:"Официальный портал правовой информации: https://pravo.gov.ru/"}
+ ]},
+ organizer:{title:"Я — организатор",eyebrow:"Маршрут организатора",cases:[
+  {topic:"Полномочия",q:"В учебной ситуации поступил вопрос, который может относиться к полномочиям другой комиссии. Как действовать корректнее?",ctx:"Конкретный порядок зависит от предмета вопроса и распределения полномочий по закону.",opts:["Самостоятельно принять решение по любому вопросу","Проверить компетенцию и действующий порядок, при необходимости направить вопрос уполномоченному органу","Игнорировать вопрос, чтобы не тратить время"],correct:1,why:"Нужно установить, какой орган уполномочен рассматривать вопрос, и действовать в соответствии с применимыми нормами и официальными процедурами.",source:"Федеральный закон № 67-ФЗ и официальный портал: https://pravo.gov.ru/"},
+  {topic:"Работа с документами",q:"При подготовке учебного информационного материала обнаружены разные версии документа. Что необходимо сделать?",ctx:"Актуальность правовой информации — обязательное условие качественного разъяснения.",opts:["Использовать версию, которую проще найти","Сопоставить дату и статус документа с официальной публикацией","Объединить фрагменты разных версий без пояснения"],correct:1,why:"Следует установить действующую редакцию по официальному источнику, проверить дату и не смешивать положения разных редакций.",source:"Официальный портал правовой информации: https://pravo.gov.ru/"},
+  {topic:"Информирование",q:"Нужно объяснить процедуру людям без юридической подготовки. Как подготовить материал?",ctx:"Простота языка не должна менять смысл правовой нормы.",opts:["Использовать понятный язык, сохранив точность и ссылку на источник","Убрать все условия и исключения, даже если они важны","Заменить правовые нормы личным мнением автора"],correct:0,why:"Доступное разъяснение должно быть понятным, точным и проверяемым. Существенные условия и исключения нужно сохранить, а источник указать.",source:"Официальные материалы избирательных органов: https://www.cikrf.ru/"},
+  {topic:"Сложная ситуация",q:"Учебный кейс не описывает важное обстоятельство, от которого зависит ответ. Как лучше поступить при подготовке решения?",ctx:"Качественный сценарий должен учитывать существенные факты.",opts:["Выбрать ответ наугад","Добавить уточняющий вопрос или обозначить границы применимости ответа","Скрыть неопределённость и дать безусловный ответ"],correct:1,why:"Если существенных фактов не хватает, нужно уточнить их или честно ограничить вывод. Это помогает избежать чрезмерно общих правовых утверждений.",source:"Официальный портал правовой информации: https://pravo.gov.ru/"}
+ ]},
+ observer:{title:"Я — наблюдатель",eyebrow:"Маршрут наблюдателя",cases:[
+  {topic:"Проверка правового основания",q:"В учебной ситуации возник вопрос о процедуре. Ты не уверен, нарушено ли правило. Что следует сделать?",ctx:"Важно отделять наблюдаемый факт от предположения о его правовой оценке.",opts:["Сразу публично объявить о нарушении","Зафиксировать конкретные обстоятельства и проверить применимые правила","Игнорировать ситуацию, потому что ты не уверен"],correct:1,why:"Полезно точно описать обстоятельства, проверить применимые нормы и действовать в пределах предусмотренных полномочий. Не следует делать категоричный вывод без достаточных оснований.",source:"Федеральный закон № 67-ФЗ: https://pravo.gov.ru/"},
+  {topic:"Факты и оценки",q:"Ты записываешь наблюдение для учебного разбора. Какая формулировка полезнее?",ctx:"Запись должна позволять другому человеку понять, что именно произошло.",opts:["«Всё выглядело подозрительно»","«Все знают, что это неправильно»","Описать конкретное действие, время и доступные проверяемые обстоятельства"],correct:2,why:"Конкретное описание проверяемых обстоятельств полезнее оценочных формулировок. Правовую квалификацию следует делать с опорой на применимые нормы и процедуру.",source:"Официальные правовые акты: https://pravo.gov.ru/"},
+  {topic:"Полномочия",q:"Перед выполнением действия ты не уверен, входит ли оно в полномочия наблюдателя. Как поступить?",ctx:"Полномочия и ограничения зависят от закона и конкретного статуса участника.",opts:["Проверить норму и официальную инструкцию, применимые к своему статусу","Действовать так, как поступал кто-то в другом регионе","Считать, что любое действие допустимо ради проверки"],correct:0,why:"Нужно проверить нормы, определяющие права, обязанности и ограничения именно для соответствующего статуса и ситуации.",source:"Официальный портал правовой информации: https://pravo.gov.ru/"},
+  {topic:"Надёжность информации",q:"В сети опубликован эмоциональный рассказ о якобы произошедшем нарушении, но первичных сведений нет. Что можно сделать?",ctx:"Вирусность сообщения не подтверждает его достоверность.",opts:["Считать рассказ доказанным из-за большого числа репостов","Проверить наличие первичных сведений и официальных сообщений, не распространяя неподтверждённые утверждения как факт","Немедленно сделать окончательный вывод о ситуации"],correct:1,why:"Нужно различать утверждение, подтверждённый факт и правовую оценку. Проверяй источник и обстоятельства; не выдавай неподтверждённые сведения за установленный факт.",source:"ЦИК России: https://www.cikrf.ru/"}
+ ]}
+};
+let currentRoute=null,caseIndex=0,selected=null,answered=false,score=0,wrongTopics=[];
+function showPage(page){document.querySelectorAll('main > section').forEach(s=>s.classList.add('hidden'));const el=document.getElementById(page+'Page');if(el)el.classList.remove('hidden');document.querySelectorAll('.navlinks button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('.navlinks button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+function startRoute(id){currentRoute=id;caseIndex=0;score=0;wrongTopics=[];showPage('quiz');renderCase();}
+function renderCase(){const r=routes[currentRoute],c=r.cases[caseIndex];selected=null;answered=false;document.getElementById('routeEyebrow').textContent=r.eyebrow;document.getElementById('routeTitle').textContent=r.title;document.getElementById('caseCounter').textContent=`Кейс ${caseIndex+1} из ${r.cases.length}`;document.getElementById('progressBar').style.width=(caseIndex/r.cases.length*100)+'%';document.getElementById('topicPill').textContent=c.topic;document.getElementById('questionText').textContent=c.q;document.getElementById('contextText').textContent=c.ctx;document.getElementById('feedbackBox').className='hidden';document.getElementById('feedbackBox').innerHTML='';document.getElementById('nextBtn').disabled=true;document.getElementById('nextBtn').textContent='Проверить ответ';const box=document.getElementById('optionsBox');box.innerHTML='';c.opts.forEach((t,i)=>{const b=document.createElement('button');b.className='option';b.innerHTML=`<span class="letter">${String.fromCharCode(65+i)}</span><span>${t}</span>`;b.onclick=()=>chooseOption(i);box.appendChild(b)});}
+function chooseOption(i){if(answered)return;selected=i;document.querySelectorAll('.option').forEach((b,j)=>b.classList.toggle('selected',i===j));document.getElementById('nextBtn').disabled=false;document.getElementById('nextBtn').textContent='Проверить ответ';}
+function nextCase(){const r=routes[currentRoute],c=r.cases[caseIndex];if(!answered){if(selected===null)return;answered=true;const correct=selected===c.correct;if(correct)score++;else wrongTopics.push(c.topic);document.querySelectorAll('.option').forEach((b,i)=>{b.disabled=true;if(i===c.correct)b.classList.add('selected')});const f=document.getElementById('feedbackBox');f.className='feedback'+(correct?'':' bad');f.innerHTML=`<strong>${correct?'Верно — решение обосновано':'Разберём ситуацию ещё раз'}</strong><p>${c.why}</p><small><b>Источник для проверки:</b> <a href="${c.source.split(': ')[1]}" target="_blank" rel="noopener noreferrer">${c.source.split(': ')[0]} ↗</a></small>`;document.getElementById('nextBtn').textContent=caseIndex===r.cases.length-1?'Посмотреть результат':'Следующий кейс';document.getElementById('progressBar').style.width=((caseIndex+1)/r.cases.length*100)+'%';return;}if(caseIndex<r.cases.length-1){caseIndex++;renderCase()}else showResult();}
+function showResult(){showPage('result');const r=routes[currentRoute];document.getElementById('resultTitle').textContent=r.title+': результат';document.getElementById('resultScore').textContent=`${score} / ${r.cases.length}`;const pct=Math.round(score/r.cases.length*100);document.getElementById('resultSummary').textContent=pct>=75?'Хорошая основа: ты уверенно справился с большинством учебных ситуаций. Повтори темы, в которых были ошибки.':pct>=50?'Ты освоил часть маршрута. Посмотри пояснения и пройди кейсы ещё раз, чтобы закрепить решения.':'Это отправная точка для обучения. Изучи объяснения и источники, а затем попробуй маршрут ещё раз.';const d=document.getElementById('resultDetails');d.innerHTML=`<h3>Что дальше?</h3><p>${wrongTopics.length?'Рекомендуется повторить темы: '+[...new Set(wrongTopics)].join(', ')+'.':'Ты правильно ответил на все кейсы этого маршрута. Для закрепления попробуй другой маршрут.'}</p><p class="muted" style="font-size:13px">Результат отражает только ответы в этом учебном прототипе и не является официальной оценкой правовой компетентности.</p>`;}
+function retryRoute(){startRoute(currentRoute)}
+showPage('home');
+</script>
+</body>
+</html>
